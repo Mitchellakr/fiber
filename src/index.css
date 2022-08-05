@@ -1,0 +1,408 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: rgb(168, 211, 230); */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: rgb(37, 35, 164);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+}
+
+.primary-btn {
+  padding: .7em 1em;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all .3s ease;
+}
+
+.secondary-btn {
+  padding: .7em 1em;
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all .3s ease;
+}
+
+.primary-btn:hover {
+  opacity: .7;
+}
+
+.menu {
+  z-index: 999;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.menu>div {
+  height: 4px;
+  width: 30px;
+  border-radius: 5px;
+  background-color: var(--black);
+}
+
+.menu>div:first-child {
+  transition: all .5s ease-in-out;
+  margin-bottom: 5px;
+}
+
+.menu>div:last-child {
+  transition: all .5s ease-in-out;
+  margin-top: 5px;
+}
+
+.active>div:first-child {
+  transform: rotate(135deg) translate(2px, -4px);
+}
+
+.active>div:nth-child(2) {
+  display: none;
+}
+
+.active>div:last-child {
+  transform: rotate(-135deg) translate(2px, 4px);
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.fiber p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.fiber h2,
+.diversity-portfolio h2 {
+  font-size: 30px;
+}
+
+.fiber-section {
+  margin-top: 6em;
+}
+
+.underline {
+  color: var(--primary-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.hero-btn {
+  gap: 2em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.rating {
+  gap: .5em;
+}
+
+.grid {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3em;
+}
+
+.writeup {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.free,
+.profile {
+  gap: 1em;
+}
+
+.illustration img {
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 999;
+}
+
+header {
+  padding: 1em 0;
+}
+
+a {
+  color: var(--black);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.bold {
+  font-weight: bold;
+  color: var(--black);
+  padding: .7em 1em;
+  border-radius: 4px;
+}
+
+.header-btn {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards,
+.testimonail-content {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.testimonail-content {
+  height: 100%;
+}
+
+.cards-section {
+  padding: 2em 0;
+}
+
+.card,
+.diversity-portfolio,
+.testimonial-card,
+.footer-map,
+.footer-fiber {
+  flex-direction: column;
+  gap: .8em;
+  align-items: flex-start;
+}
+
+.border {
+  border: 1px solid rgba(37, 35, 164, 0.227);
+  border-radius: 5px;
+}
+
+.testimonial-card {
+  padding: 1em;
+  justify-content: space-between;
+}
+
+.testimonial-section {
+  padding: 4em 0;
+}
+
+.diversity-portfolio p {
+  opacity: .6;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.name,
+.revenue {
+  font-size: 14px;
+}
+
+.testimonial-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.diversity-content {
+  background-color: var(--primary-color);
+  padding: 2em 2em 0;
+  border-radius: 6px;
+  color: var(--white);
+  gap: 1em;
+}
+
+.diversity-img img {
+  width: 100%;
+}
+
+.footer-content {
+  grid-template-columns: repeat(6, 1fr);
+  align-items: flex-start;
+  padding: 4em 0;
+}
+
+footer {
+  background-color: rgba(37, 35, 164, 0.065);
+}
+
+.footer-fiber {
+  grid-column: 1/3;
+}
+
+.footer-map ul {
+  flex-direction: column;
+  gap: .4em;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width:1034px) {
+  .blade {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-section-content {
+    gap: 1em;
+  }
+}
+
+@media only screen and (max-width:920px) {
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width:883px) {
+  .hero-section-content {
+    grid-template-columns: 1fr;
+  }
+
+  .writeup {
+    order: 1;
+  }
+}
+
+@media only screen and (max-width:870px) {
+
+  .diversity-content,
+  .testimonail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-btn {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:769px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:769px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding-top: 6em;
+    transform: translateY(-100%);
+  }
+
+  .header-btn {
+    position: absolute;
+    bottom: 20em;
+    left: 0;
+    width: 100%;
+    padding-bottom: 25em;
+    display: flex;
+    padding: 0 2em;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-1000%);
+  }
+
+  .menu-open {
+    transform: translate(0);
+  }
+
+
+  .footer-fiber {
+    grid-column: 1/2;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width:425px) {
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width:375px) {
+  .hero-btn {
+    flex-direction: column;
+  }
+
+  .primary-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .app {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
